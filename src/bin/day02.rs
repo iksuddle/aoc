@@ -1,6 +1,6 @@
-use std::error::Error;
+use aoc::Error;
 
-fn main() -> Result<(), Box<dyn Error>> {
+fn main() -> Result<(), Error> {
     let input = include_str!("../../input/day02.txt");
 
     println!("part 1: {}", part1(input)?);
@@ -18,7 +18,7 @@ fn is_invalid(s: &str) -> bool {
     first_half == second_half
 }
 
-fn part1(input: &str) -> Result<u64, Box<dyn Error>> {
+fn part1(input: &str) -> Result<u64, Error> {
     let mut total_sum: u64 = 0;
 
     for range in input.trim().split(',') {
@@ -50,7 +50,7 @@ fn is_periodic(s: &str) -> bool {
     middle.contains(s)
 }
 
-fn part2(input: &str) -> Result<u64, Box<dyn Error>> {
+fn part2(input: &str) -> Result<u64, Error> {
     let mut total_sum: u64 = 0;
 
     for range in input.trim().split(',') {

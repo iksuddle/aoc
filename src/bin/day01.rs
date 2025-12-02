@@ -1,6 +1,6 @@
-use std::error::Error;
+use aoc::Error;
 
-fn main() -> Result<(), Box<dyn Error>> {
+fn main() -> Result<(), Error> {
     let input = include_str!("../../input/day01.txt");
 
     println!("part 1: {}", part1(input)?);
@@ -9,7 +9,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
-fn part1(input: &str) -> Result<i32, Box<dyn Error>> {
+fn part1(input: &str) -> Result<i32, Error> {
     let mut counter = 0;
     let mut pointer = 50;
 
@@ -31,7 +31,7 @@ fn part1(input: &str) -> Result<i32, Box<dyn Error>> {
     Ok(counter)
 }
 
-fn part2(input: &str) -> Result<i32, Box<dyn Error>> {
+fn part2(input: &str) -> Result<i32, Error> {
     let mut counter = 0;
     let mut pointer = 50;
 
